@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos...</title>
+    <style>
+        div#conteiner{
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        div#filho{
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            color: white;
+            font-size: 1.6em;
+            font-weight: bold;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+       
+    </style>
+    
+</head>
+<body>
+    <div id="conteiner">
+        <div id="filho">
+            CLIQUE AQUI!
+        </div>
+    </div>
+    
+</body>
+<script>
+    var filho = document.getElementById("filho")
+    filho.addEventListener("click", clicar)
+    filho.addEventListener("mouseenter", entrar)
+    filho.addEventListener("mouseleave", sair)
+    function clicar (){
+        
+            filho.innerText = "Clicou!"
+            filho.style.background = "red"
+            
+    }
+    function entrar(){
+        filho.innerText = "AIIIIIIIIII"
+        filho.style.background = "purple"
+
+    }
+    function sair(){
+        filho.innerText = "2 narradas e o milton leite."
+        filho.style.background = "green"
+    }
+
+</script>
+</html>

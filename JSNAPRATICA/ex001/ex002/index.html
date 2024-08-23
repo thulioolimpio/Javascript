@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrando conhecimentos</title>
+</head>
+<body>
+    <h1>Soamando valores!</h1>
+    <form action="cadastro.php">
+        <input type="number" name="tn1" id="tn1"> +
+        <input type="number" name="tn2" id="tn2">
+        <input type="button" value="Somar" onclick="somar()">
+    </form>
+    <p id="resultado">Resultado:</p>
+</body>
+<script>
+    function somar(){
+    var tn1 = document.getElementById("tn1")
+    var tn2 = document.getElementById("tn2")
+    var resultado = document.getElementById("resultado")
+    var n1 = Number(tn1.value)
+    var n2 = Number(tn2.value)
+    var s = n1 + n2
+    resultado.innerText = `A soma entre ${n1} e ${n2} é igual a ${s}`
+    
+}
+
+</script>
+</html>
